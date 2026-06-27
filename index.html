@@ -1,71 +1,102 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mercado CodeMarket</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js" defer></script>
-</head>
-<body>
-<header id="topo">
- <h1>CodeMarket</h1>
- <h2>O Mercado dos Programadores</h2>
-<nav id="menu">
-  <ul>
-    <li><a href="#">Início</a></li>
-    <li><a href="#">Produtos</a></li>
-    <li><a href="#">Ofertas</a></li>
-    <li><a href="#">Contato</a></li>
-  </ul>
-</nav>
-</header>
 
-<section id="sobre">
-  <h2>Sobre o CodeMarket</h2>
-  <p>Bem Vindo ao CodeMarket, um mercado para programadores e curiosos.</p>
-  <p>Aqui você encontra produtos, promoções e ofertas em um ambiente desenvolvido para fins de estudo.</p>
-</section>
-<section id="produtos">
-  <h2>Produtos em Destaque!</h2>
-  
-  <div class="cards">
-    <article class="card">
-      <h3>NoteBook</h3>
-      <img src="img/notebook.png">
-      <p>Alto desempenho para programadores.</p>
-    </article>
-    
-    <article class="card">
-      <h3>Teclado Mecânico</h3>
-      <img src="img/teclado.jpg">
-      <p>Conforto e Precisão</p>
-    </article>
-    
-    <article class="card">
-      <h3>Mouse Ergonômico</h3>
-      <img src="img/mouse.jpg">
-      <p>Mais saúde no seu trabalho.</p>
-    </article>
-    
-    <article class="card">
-      <h3>Microfone Dedicado</h3>
-      <img src="img/microfone.jpg">
-      <p>Qualidade no Áudio</p>
-    </article>
-    
-    <article class="card">
-      <h3>Monitor Curvo</h3>
-      <img src="img/monitor.jpg">
-      <p>Tamanho e Produtividade</p>
-    </article>
-    
-    <article class="card">
-      <h3>Fone Intrauricular</h3>
-      <img src="img/">
-      <p>Saúde para os Ouvidos</p>
-    </article>
-  </div>
-</section>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado CodeMarket</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <header id="topo">
+        <h1>CodeMarket</h1>
+        <h2>O Mercado dos Programadores</h2>
+        <nav id="menu">
+            <ul>
+                <li><a href="#topo">Início</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#ofertas">Ofertas</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="sobre">
+        <h2>Sobre o CodeMarket</h2>
+        <p>Bem-vindo ao CodeMarket, um mercado para programadores e curiosos.</p>
+        <p>
+        Aqui você encontra produtos, promoções e ofertas em um ambiente
+            desenvolvido para fins de estudo.
+        </p>
+    </section>
+    <section id="produtos">
+        <h2>Produtos em Destaque!</h2>
+        <div class="cards">
+            <article class="card">
+                <h3>Notebook</h3>
+                <img src="img/notebook.png" alt="Notebook">
+                <p>Alto desempenho.</p>
+                <input type="button" value="Comprar" class="botao-comprar">
+            </article>
+            <article class="card">
+                <h3>Teclado Mecânico</h3>
+                <img src="img/teclado.png" alt="Teclado">
+                <p>Conforto e precisão.</p>
+                <input type="button" value="Comprar" class="botao-comprar">
+            </article>
+            <article class="card">
+                <h3>Mouse Ergonômico</h3>
+                <img src="img/mouse.png" alt="Mouse">
+                <p>Mais saúde no seu trabalho.</p>
+                <input type="button" value="Comprar" class="botao-comprar">
+            </article>
+            <article class="card">
+                <h3>Microfone Dedicado</h3>
+                <img src="img/microfone.png" alt="Microfone">
+                <p>Qualidade no áudio.</p>
+               <input type="button" value="Comprar" class="botao-comprar">
+            </article>
+            <article class="card">
+                <h3>Monitor Curvo</h3>
+                <img src="img/monitor.jpg" alt="Monitor">
+                <p>Tamanho e produtividade.</p>
+                <input type="button" value="Comprar" class="botao-comprar">
+            </article>
+            <article class="card">
+                <h3>Fone Intrauricular</h3>
+                <img src="img/fone.png" alt="Fone">
+                <p>Saúde para os ouvidos.</p>
+                <input type="button" value="Comprar" class="botao-comprar">
+            </article>
+        </div>
+    </section>
+    <section id="ofertas">
+        <h2>Ofertas!</h2>
+        <div class="ofertas">
+            <div class="oferta">
+                <h3>Teclado Mecânico</h3>
+                <img src="img/teclado.png" alt="Teclado Mecânico">
+                <p><del>R$ 299,90</del></p>
+                <p>R$ 229,90</p>
+                <input type="button"value="Comprar"class="botao-comprar">
+            </div>
+            <div class="oferta">
+                <h3>Monitor Curvo</h3>
+                <img src="img/monitor.jpg" alt="Monitor Curvo">
+                <p><del>R$ 2.199,99</del></p>
+                <p>R$ 2.000,00</p>
+                <input type="button" value="Comprar"class="botao-comprar">
+            </div>
+        </div>
+    </section>
+
+    <footer id="contato">
+        <p>&copy; 2026 CodeMarket.</p>
+        <p>Projeto fictício para praticar.</p>
+    </footer>
+
 </body>
+
 </html>
