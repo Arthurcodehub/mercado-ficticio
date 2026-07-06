@@ -29,7 +29,7 @@ body{
     left: 0; 
     width: 100%; 
     z-index: 1000; 
-    height: 90px;
+    min-height: 90px;
 }
 
 .logo{
@@ -194,29 +194,4 @@ footer#contato p {
 
 .botao:hover {
   background-color: #3e8e41;
-}
-  
-/* Responsividade */
-
-@media only screen and (max-width: 768px) {
-  .card {
-    max-width: 100%;
-    margin: 10px;
-  }
-  .card img {
-    height: 100px;
-  }
-}
-
-
-@media only screen and (max-width: 480px) {
-  .cards {
-    flex-direction: column;
-  }
-  .card {
-    margin: 10px 0;
-  }
-  .card img {
-    height: 50px;
-  }
 }

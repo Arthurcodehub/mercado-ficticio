@@ -1,0 +1,70 @@
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  
+  .cabecalho {
+    flex-direction: column;
+    height: auto;
+    padding: var(--padding-md);
+    gap: var(--gap-md);
+    position: static;
+  }
+
+  .logo {
+    width: 130px;
+  }
+
+  #menu > ul {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap-md);
+  }
+
+  #menu {
+    width: auto;
+  }
+
+  #sobre {
+    grid-template-columns: 1fr;
+    gap: var(--gap-lg);
+    padding: var(--padding-lg);
+    margin: var(--margin-lg) auto;
+    text-align: center;
+  }
+
+  .sobre-texto h2 {
+    font-size: 2rem;
+  }
+
+  .sobre-texto p {
+    font-size: 1rem;
+  }
+
+  .imagem-sobre {
+    height: 250px;
+  }
+
+  .cards {
+    gap: var(--gap-md);
+  }
+
+  .card {
+    width: 100%;
+    max-width: 320px;
+    margin: 0;
+  }
+
+  footer#contato {
+    padding: var(--padding-md);
+    text-align: center;
+  }
+}
+
+/* DEFINIÇÃO DE VARIÁVEIS */
+
+:root {
+  --padding-md: 15px;
+  --gap-md: 15px;
+  --padding-lg: 30px;
+  --gap-lg: 30px;
+  --margin-lg: 30px;
+}
