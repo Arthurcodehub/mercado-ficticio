@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="CodeMarket - Mercado online para programadores, estudantes e entusiastas de tecnologia com produtos em destaque e ofertas especiais.">
     <title>CodeMarket - Mercado para Programadores</title>
@@ -10,43 +9,36 @@
     <link rel="stylesheet" href="css/responsive.css">
     <script src="js/script.js" defer></script>
 </head>
-
 <body>
-    <header class="cabecalho" role="banner">
-        <div class="container-logo">
-            <a href="#topo" class="logo-link" aria-label="CodeMarket - Ir para início">
-                <img src="img/logo.png" alt="CodeMarket - Logo" class="logo" width="100" height="100">
-            </a>
-        </div>
-        
-        <nav id="menu" role="navigation" aria-label="Menu principal">
-            <ul id="menu-items" class="menu-items">
-                <li><a href="#topo">Início</a></li>
-                <li><a href="#produtos">Produtos</a></li>
-                <li><a href="#ofertas">Ofertas</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-    
+<header class="cabecalho" role="banner">
+    <div class="container-logo">
+        <a href="#topo" class="logo-link" aria-label="CodeMarket - Ir para início">
+            <img src="img/logo.png" alt="CodeMarket - Logo" class="logo" width="100" height="100">
+        </a>
+    </div>
+    <button id="menu-toggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <nav id="menu" role="navigation" aria-label="Menu principal">
+        <ul id="menu-items" class="menu-items">
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#produtos">Produtos</a></li>
+            <li><a href="#ofertas">Ofertas</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+</header>
     <main id="conteudo-principal">
         <section id="sobre" aria-labelledby="sobre-titulo">
+            <h2 id="sobre-titulo">Sobre o CodeMarket</h2>
             <div class="sobre-texto">
-                <h2 id="sobre-titulo">Sobre o CodeMarket</h2>
-                <p>
-                    Bem-vindo ao <strong>CodeMarket</strong>, um mercado criado para
-                    programadores, estudantes e entusiastas de tecnologia.
-                </p>
-                <p>
-                    Aqui você encontra produtos, promoções e ofertas em um ambiente
-                    desenvolvido para fins de estudo, com foco em design moderno,
-                    organização e uma ótima experiência de navegação.
-                </p>
+                <p>Bem-vindo ao <strong>CodeMarket</strong>, um mercado criado para programadores, estudantes e entusiastas de tecnologia.</p>
+                <p>Aqui você encontra produtos, promoções e ofertas em um ambiente desenvolvido para fins de estudo, com foco em design moderno, organização e uma ótima experiência de navegação.</p>
             </div>
-        
             <img src="img/sobre.png" alt="Imagem da loja CodeMarket com ambiente moderno e organizado" class="imagem-sobre" width="400" height="300">
         </section>
-
         <section id="produtos" aria-labelledby="produtos-titulo">
             <h2 id="produtos-titulo">Produtos em Destaque</h2>
             <div class="cards" role="region" aria-label="Lista de produtos em destaque">
@@ -57,7 +49,6 @@
                     <p>Alto desempenho.</p>
                     <button class="botao" aria-label="Comprar Notebook">Comprar</button>
                 </article>
-
                 <article class="card" aria-label="Teclado Mecânico - R$ 2.500,00">
                     <h3>Teclado Mecânico</h3>
                     <img src="img/teclado.png" alt="Teclado Mecânico com design ergonômico" width="200" height="150">
@@ -65,7 +56,6 @@
                     <p>Conforto e precisão.</p>
                     <button class="botao" aria-label="Comprar Teclado Mecânico">Comprar</button>
                 </article>
-
                 <article class="card" aria-label="Mouse Ergonômico - R$ 2.500,00">
                     <h3>Mouse Ergonômico</h3>
                     <img src="img/mouse.png" alt="Mouse Ergonômico para melhor conforto" width="200" height="150">
@@ -73,7 +63,6 @@
                     <p>Mais saúde no seu trabalho.</p>
                     <button class="botao" aria-label="Comprar Mouse Ergonômico">Comprar</button>
                 </article>
-
                 <article class="card" aria-label="Microfone Dedicado - R$ 2.500,00">
                     <h3>Microfone Dedicado</h3>
                     <img src="img/microfone.png" alt="Microfone Dedicado para áudio profissional" width="200" height="150">
@@ -81,7 +70,6 @@
                     <p>Qualidade no áudio.</p>
                     <button class="botao" aria-label="Comprar Microfone Dedicado">Comprar</button>
                 </article>
-
                 <article class="card" aria-label="Monitor Curvo - R$ 2.500,00">
                     <h3>Monitor Curvo</h3>
                     <img src="img/monitor.jpg" alt="Monitor Curvo para maior produtividade" width="200" height="150">
@@ -89,7 +77,6 @@
                     <p>Tamanho e produtividade.</p>
                     <button class="botao" aria-label="Comprar Monitor Curvo">Comprar</button>
                 </article>
-
                 <article class="card" aria-label="Fone Intrauricular - R$ 2.500,00">
                     <h3>Fone Intrauricular</h3>
                     <img src="img/fone.png" alt="Fone Intrauricular com som cristalino" width="200" height="150">
@@ -99,7 +86,6 @@
                 </article>
             </div>
         </section>
-
         <section id="ofertas" aria-labelledby="ofertas-titulo">
             <h2 id="ofertas-titulo">Ofertas Especiais</h2>
             <div class="cards" role="region" aria-label="Lista de produtos em oferta">
@@ -114,7 +100,6 @@
                     <p aria-label="Preço promocional" class="preco-desconto">R$ 229,90</p>
                     <button class="botao" aria-label="Comprar Teclado Mecânico por R$ 229,90">Comprar</button>
                 </article>
-
                 <article class="card card-oferta" aria-label="Monitor Curvo em oferta - De R$ 2.199,99 por R$ 2.000,00">
                     <h3>Monitor Curvo</h3>
                     <img src="img/monitor.jpg" alt="Monitor Curvo em promoção" width="200" height="150">
@@ -129,7 +114,6 @@
             </div>
         </section>
     </main>
-
     <footer id="contato" role="contentinfo" aria-labelledby="contato-titulo">
         <h2 id="contato-titulo" class="sr-only">Contato e Informações</h2>
         <p>&copy; 2026 CodeMarket. Todos os direitos reservados.</p>
@@ -140,9 +124,5 @@
             </button>
         </nav>
     </footer>
-
-
-
 </body>
-
 </html>
