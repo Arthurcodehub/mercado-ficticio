@@ -1,10 +1,63 @@
+/* DEFINIÇÃO DE VARIÁVEIS */
+:root {
+  --padding-sm: 10px;
+  --padding-md: 15px;
+  --padding-lg: 30px;
+  --gap-sm: 10px;
+  --gap-md: 15px;
+  --gap-lg: 30px;
+  --margin-sm: 10px;
+  --margin-lg: 30px;
+}
+
 /* RESPONSIVIDADE */
+
+/* Telas médias (tablets) */
+@media (max-width: 992px) {
+
+  body {
+    padding-top: 60px;
+  }
+
+  .cabecalho {
+    padding: var(--padding-sm);
+    min-height: 60px;
+  }
+
+  #menu {
+    width: 30%;
+    top: 60px;
+    right: 0;
+  }
+
+  #sobre {
+    grid-template-columns: 1fr;
+    gap: var(--gap-lg);
+    padding: var(--padding-lg);
+  }
+
+  .card {
+    max-width: 100%;
+    margin: var(--margin-sm);
+  }
+
+  footer#contato {
+    padding: var(--padding-sm);
+  }
+}
+
+/* Telas pequenas (celulares) */
 @media (max-width: 768px) {
+
+  body {
+    padding-top: 50px;
+  }
 
   .cabecalho {
     flex-direction: column;
     height: auto;
-    padding: var(--padding-md);
+    min-height: 50px;
+    padding: var(--padding-sm);
     gap: var(--gap-md);
     position: static;
   }
@@ -13,14 +66,19 @@
     width: 130px;
   }
 
-  #menu > ul {
-    flex-direction: column;
-    align-items: center;
-    gap: var(--gap-md);
+  #menu-toggle {
+    top: 10px;
+    right: 10px;
   }
 
   #menu {
     width: auto;
+  }
+
+  #menu > ul {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap-md);
   }
 
   #sobre {
@@ -50,7 +108,8 @@
   .card {
     width: 100%;
     max-width: 320px;
-    margin: 0;
+    margin: 0 auto;
+    padding: var(--padding-sm);
   }
 
   footer#contato {
@@ -71,71 +130,4 @@
   .imagem-sobre {
     height: 220px;
   }
-}
-
-/* Responsividade para telas médias */
-@media (max-width: 992px) {
-  
-  #sobre {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    padding: 2rem;
-  }
-  
-  .cabecalho {
-    padding: 10px;
-    min-height: 60px;
-  }
-  
-  #menu {
-    width: 100%;
-    top: 60px;
-    left: 0;
-  }
-  
-  .card {
-    max-width: 100%;
-    margin: 10px;
-  }
-  
-  /* Ajustes para o footer */
-  footer#contato {
-    padding: 10px;
-  }
-}
-
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-  
-  #sobre {
-    padding: 1rem;
-  }
-  
-  .cabecalho {
-    padding: 5px;
-    min-height: 50px;
-  }
-  
-  #menu-toggle {
-    top: 10px;
-    right: 10px;
-  }
-  
-  .card {
-    padding: 10px;
-  }
-  
-  footer#contato {
-    padding: 5px;
-  }
-}
-
-/* DEFINIÇÃO DE VARIÁVEIS */
-
-:root {
-  --padding-md: 15px;
-  --gap-md: 15px;
-  --padding-lg: 30px;
-  --gap-lg: 30px;
-  --margin-lg: 30px;
 }
