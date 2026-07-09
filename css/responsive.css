@@ -73,6 +73,63 @@
   }
 }
 
+/* Responsividade para telas médias */
+@media (max-width: 992px) {
+  
+  #sobre {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .cabecalho {
+    padding: 10px;
+    min-height: 60px;
+  }
+  
+  #menu {
+    width: 100%;
+    top: 60px;
+    left: 0;
+  }
+  
+  .card {
+    max-width: 100%;
+    margin: 10px;
+  }
+  
+  /* Ajustes para o footer */
+  footer#contato {
+    padding: 10px;
+  }
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  
+  #sobre {
+    padding: 1rem;
+  }
+  
+  .cabecalho {
+    padding: 5px;
+    min-height: 50px;
+  }
+  
+  #menu-toggle {
+    top: 10px;
+    right: 10px;
+  }
+  
+  .card {
+    padding: 10px;
+  }
+  
+  footer#contato {
+    padding: 5px;
+  }
+}
+
 /* DEFINIÇÃO DE VARIÁVEIS */
 
 :root {
