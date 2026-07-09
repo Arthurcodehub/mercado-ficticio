@@ -54,15 +54,15 @@ body{
 
 #menu-toggle span {
     display: block;
-    width: 5px; /* Ajuste a largura da barra */
-    height: 40px; /* Ajuste a altura da barra */
+    width: 100%;
+    height: 5px;
     background-color: #333;
-    margin-right: 5px; /* Ajuste a margem entre as barras */
+    margin-bottom: 5px;
     transition: all 0.3s;
 }
 
 #menu-toggle.active span:nth-child(1) {
-    transform: rotate(45deg) translateX(10px);
+    transform: translateY(10px) rotate(45deg);
 }
 
 #menu-toggle.active span:nth-child(2) {
@@ -70,7 +70,7 @@ body{
 }
 
 #menu-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg) translateX(10px);
+    transform: translateY(-10px) rotate(-45deg);
 }
 
 #menu {
@@ -78,8 +78,7 @@ body{
     position: absolute;
     top: 60px;
     right: 0;
-    width: 200px; /* Ajuste a largura do menu */
-    height: 100px; /* Ajuste a altura do menu */
+    width: 200px;
     background-color: #000700;
     padding: 20px;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
@@ -104,43 +103,48 @@ body{
     display: block;
 }
 
-#sobre{
-    max-width:1200px;
-    margin:80px auto;
-    padding:60px 40px;
-    display:grid;
-    grid-template-columns:1.2fr 1fr;
-    gap:60px;
-    align-items:center;
+/* Seção Sobre */
+#sobre {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  gap: 6rem;
+  max-width: 75rem;
+  margin: 8rem auto;
+  padding: 6rem 4rem;
+  background-color: #f7f7f7;
 }
 
-.sobre-texto h2{
-    font-size:3rem;
-    color:#1d1d1d;
-    margin-bottom:20px;
-    line-height:1.2;
+/* Texto */
+.sobre-texto h2 {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  line-height: 1.2;
+  color: #1d1d1d;
 }
 
-.sobre-texto p{
-    font-size:1.1rem;
-    line-height:1.8;
-    color:#555;
-    margin-bottom:18px;
+.sobre-texto p {
+  margin-bottom: 1.8rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
 }
 
-.imagem-sobre{
-    width:100%;
-    height:420px;
-    object-fit:cover;
-    border-radius:18px;
-    box-shadow:0 20px 40px rgba(0,0,0,.12);
-    transition:.3s;
+/* Imagem */
+.imagem-sobre {
+  width: 100%;
+  height: 42rem;
+  object-fit: cover;
+  border-radius: 1.8rem;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.12);
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 }
 
-.imagem-sobre:hover{
-    transform:scale(1.02);
-    box-shadow:0 25px 50px rgba(0,0,0,.18);
+.imagem-sobre:hover {
+  transform: scale(1.02);
+  box-shadow: 0 2.5rem 5rem rgba(0, 0, 0, 0.18);
 }
+
 
 .cards {
   display: flex;

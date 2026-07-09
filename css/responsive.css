@@ -1,6 +1,6 @@
 /* RESPONSIVIDADE */
 @media (max-width: 768px) {
-  
+
   .cabecalho {
     flex-direction: column;
     height: auto;
@@ -56,6 +56,20 @@
   footer#contato {
     padding: var(--padding-md);
     text-align: center;
+  }
+}
+
+/* Celular em modo paisagem: largura passa de 768px, mas a altura é pequena */
+@media (orientation: landscape) and (max-height: 500px) {
+
+  #sobre {
+    padding: var(--padding-md) var(--padding-lg);
+    margin: var(--gap-md) auto;
+    gap: var(--gap-lg);
+  }
+
+  .imagem-sobre {
+    height: 220px;
   }
 }
 
