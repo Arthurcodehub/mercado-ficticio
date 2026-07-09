@@ -1,48 +1,64 @@
-/* DEFINIÇÃO DE VARIÁVEIS */
-:root {
-  --padding-sm: 10px;
-  --padding-md: 15px;
-  --padding-lg: 30px;
-  --gap-sm: 10px;
-  --gap-md: 15px;
-  --gap-lg: 30px;
-  --margin-sm: 10px;
-  --margin-lg: 30px;
-}
-
-/* RESPONSIVIDADE */
+/* RESPONSIVIDADE
+   as variáveis de cor, tipografia e espaçamento (--color-*, --space-*, --font-*)
+   estão definidos em :root no style.css e são reaproveitados aqui. */
 
 /* Telas médias (tablets) */
 @media (max-width: 992px) {
 
   body {
-    padding-top: 60px;
+    padding-top: var(--header-height-md);
   }
 
   .cabecalho {
-    padding: var(--padding-sm);
-    min-height: 60px;
+    padding: 0 var(--space-md);
+    min-height: var(--header-height-md);
+  }
+
+  section[id],
+  footer#contato {
+    scroll-margin-top: calc(var(--header-height-md) + var(--space-md));
+  }
+
+  /* Abaixo de 992px o menu vira dropdown acionado pelo botão hambúrguer */
+  #menu-toggle {
+    display: block;
+    top: 18px;
   }
 
   #menu {
-    width: 30%;
-    top: 60px;
+    display: none;
+    position: absolute;
+    width: 40%;
+    top: var(--header-height-md);
     right: 0;
+    background-color: var(--color-header);
+    padding: var(--space-lg);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+  }
+
+  #menu.show {
+    display: flex;
+  }
+
+  #menu ul {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
   }
 
   #sobre {
     grid-template-columns: 1fr;
-    gap: var(--gap-lg);
-    padding: var(--padding-lg);
+    gap: var(--space-xl);
+    padding: var(--space-xl) var(--space-lg);
   }
 
   .card {
     max-width: 100%;
-    margin: var(--margin-sm);
+    width: calc(50% - var(--space-lg));
   }
 
   footer#contato {
-    padding: var(--padding-sm);
+    padding: var(--space-lg) var(--space-md);
   }
 }
 
@@ -50,71 +66,80 @@
 @media (max-width: 768px) {
 
   body {
-    padding-top: 50px;
+    padding-top: var(--header-height-sm);
   }
 
   .cabecalho {
     flex-direction: column;
     height: auto;
-    min-height: 50px;
-    padding: var(--padding-sm);
-    gap: var(--gap-md);
+    min-height: var(--header-height-sm);
+    padding: var(--space-sm) var(--space-md);
+    gap: var(--space-sm);
     position: static;
   }
 
+  section[id],
+  footer#contato {
+    scroll-margin-top: var(--space-md);
+  }
+
   .logo {
-    width: 130px;
+    width: 120px;
   }
 
   #menu-toggle {
-    top: 10px;
-    right: 10px;
+    top: 12px;
+    right: var(--space-md);
   }
 
   #menu {
     width: auto;
   }
 
-  #menu > ul {
+  #menu ul {
     flex-direction: column;
     align-items: center;
-    gap: var(--gap-md);
+    gap: var(--space-md);
   }
 
   #sobre {
     grid-template-columns: 1fr;
-    gap: var(--gap-lg);
-    padding: var(--padding-lg);
-    margin: var(--margin-lg) auto;
+    gap: var(--space-lg);
+    padding: var(--space-lg) var(--space-md);
+    margin: var(--space-lg) auto;
     text-align: center;
+    border-radius: 0.75rem;
   }
 
   .sobre-texto h2 {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 
   .sobre-texto p {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
   .imagem-sobre {
-    height: 250px;
+    height: 220px;
+  }
+
+  #produtos,
+  #ofertas {
+    padding: var(--space-lg) var(--space-md);
   }
 
   .cards {
-    gap: var(--gap-md);
+    gap: var(--space-md);
   }
 
   .card {
     width: 100%;
     max-width: 320px;
     margin: 0 auto;
-    padding: var(--padding-sm);
   }
 
   footer#contato {
-    padding: var(--padding-md);
-    text-align: center;
+    padding: var(--space-lg) var(--space-sm);
   }
 }
 
@@ -122,12 +147,42 @@
 @media (orientation: landscape) and (max-height: 500px) {
 
   #sobre {
-    padding: var(--padding-md) var(--padding-lg);
-    margin: var(--gap-md) auto;
-    gap: var(--gap-lg);
+    padding: var(--space-md) var(--space-lg);
+    margin: var(--space-md) auto;
+    gap: var(--space-lg);
   }
 
   .imagem-sobre {
-    height: 220px;
+    height: 200px;
+  }
+}
+
+/* Telas grandes (monitores wide/ultrawide) */
+@media (min-width: 1400px) {
+
+  .cabecalho {
+    padding: 0 var(--space-2xl);
+  }
+
+  #menu ul {
+    gap: 3.5rem;
+  }
+
+  #sobre {
+    max-width: 90rem;
+    gap: 6rem;
+  }
+
+  #produtos,
+  #ofertas {
+    max-width: 90rem;
+  }
+
+  .cards {
+    gap: var(--space-xl);
+  }
+
+  .card {
+    max-width: 300px;
   }
 }
