@@ -30,7 +30,7 @@
   /* Altura do header fixo (usada para compensar o conteúdo) */
   --header-height: 90px;
   --header-height-md: 60px;
-  --header-height-sm: 50px;
+  --header-height-sm: 112px;
 }
 
 *{
