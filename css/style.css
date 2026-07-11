@@ -76,6 +76,34 @@ footer#contato {
     border: 0;
 }
 
+/* Skip link: fica escondido fora da tela e só aparece quando recebe foco (navegação por teclado) */
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: var(--space-md);
+    z-index: 2000;
+    background-color: var(--color-accent);
+    color: #fff;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 0.4rem;
+    text-decoration: none;
+    transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+    top: var(--space-md);
+}
+
+/* Foco visível consistente em todos os elementos interativos */
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
 /* =========================================
    HEADER E MENU
    ========================================= */
@@ -407,3 +435,4 @@ footer#contato p {
 footer#contato nav {
   margin-top: var(--space-sm);
 }
+
