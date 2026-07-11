@@ -94,13 +94,22 @@ footer#contato {
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.logo{
-    width: 150px;
+.logo {
+    width: 180px;
+    height: auto;
     display: block;
+    transition: transform .25s ease, filter .25s ease;
+    filter: drop-shadow(0 3px 8px rgba(45, 182, 166, .25));
 }
 
-.logo-link{
-    display: inline-block;
+.logo:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 5px 12px rgba(45, 182, 166, .45));
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
 }
 
 /* Botão hambúrguer: só aparece em telas menores (ver responsive.css) */
