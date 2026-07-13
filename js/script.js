@@ -89,3 +89,7 @@ document.querySelectorAll('.card .botao').forEach((botao) => {
     mostrarToast(`✅ ${nomeProduto} adicionado — em breve você poderá finalizar a compra!`);
   });
 });
+
+document.getElementById('btn-whatsapp')?.addEventListener('click', () => {
+  mostrarToast('📱 Este é um projeto fictício — sem WhatsApp real configurado.');
+});
