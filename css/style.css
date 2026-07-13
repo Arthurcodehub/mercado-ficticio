@@ -436,3 +436,32 @@ footer#contato nav {
   margin-top: var(--space-sm);
 }
 
+.toast-container {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  pointer-events: none;
+}
+
+.toast {
+  background: var(--cor-fundo-terminal, #1e1e1e);
+  color: var(--cor-texto-claro, #ffffff);
+  border-left: 4px solid var(--cor-destaque, #4ade80);
+  padding: 0.75rem 1.25rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.toast.toast-visivel {
+  opacity: 1;
+  transform: translateY(0);
+}

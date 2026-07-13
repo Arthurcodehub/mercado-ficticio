@@ -62,3 +62,30 @@
     }
   });
 })();
+
+// Feedback visual ao clicar em "Comprar"
+function mostrarToast(mensagem) {
+  const container = document.getElementById('toast-container');
+  if (!container) return;
+
+  const toast = document.createElement('div');
+  toast.className = 'toast';
+  toast.textContent = mensagem;
+  container.appendChild(toast);
+
+  // força reflow pra garantir a transição
+  requestAnimationFrame(() => toast.classList.add('toast-visivel'));
+
+  setTimeout(() => {
+    toast.classList.remove('toast-visivel');
+    toast.addEventListener('transitionend', () => toast.remove(), { once: true });
+  }, 3000);
+}
+
+document.querySelectorAll('.card .botao').forEach((botao) => {
+  botao.addEventListener('click', () => {
+    const card = botao.closest('.card');
+    const nomeProduto = card?.querySelector('h3')?.textContent ?? 'Produto';
+    mostrarToast(`✅ ${nomeProduto} adicionado — em breve você poderá finalizar a compra!`);
+  });
+});
