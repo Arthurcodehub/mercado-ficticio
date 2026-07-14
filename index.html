@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <script src="js/script.js" defer></script>
+    <script src="js/produtos.js" defer></script>
 </head>
 <body>
 <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo</a>
@@ -42,79 +43,13 @@
             <img src="img/sobre.jpg" alt="Imagem da loja CodeMarket com ambiente moderno e organizado" class="imagem-sobre" width="400" height="300" loading="lazy">
         </section>
         <section id="produtos" aria-labelledby="produtos-titulo">
-            <h2 id="produtos-titulo">Produtos em Destaque</h2>
-            <div class="cards" role="region" aria-label="Lista de produtos em destaque">
-                <article class="card" aria-label="Notebook - R$ 2.500,00">
-                    <h3>Notebook</h3>
-                    <img src="img/notebook.png" alt="Notebook com alta performance" width="200" height="150" loading="lazy">
-                    <p aria-label="Preço">R$ 3.499,90</p>
-                    <p>Alto desempenho.</p>
-                    <button class="botao" type="button" aria-label="Comprar Notebook">Comprar</button>
-                </article>
-                <article class="card" aria-label="Teclado Mecânico - R$ 2.500,00">
-                    <h3>Teclado Mecânico</h3>
-                    <img src="img/teclado.png" alt="Teclado Mecânico com design ergonômico" width="200" height="150" loading="lazy">
-                    <p aria-label="Preço">R$ 299,90</p>
-                    <p>Conforto e precisão.</p>
-                    <button class="botao" type="button" aria-label="Comprar Teclado Mecânico">Comprar</button>
-                </article>
-                <article class="card" aria-label="Mouse Ergonômico - R$ 2.500,00">
-                    <h3>Mouse Ergonômico</h3>
-                    <img src="img/mouse.png" alt="Mouse Ergonômico para melhor conforto" width="200" height="150" loading="lazy">
-                    <p aria-label="Preço">R$ 149,90</p>
-                    <p>Mais saúde no seu trabalho.</p>
-                    <button class="botao" type="button" aria-label="Comprar Mouse Ergonômico">Comprar</button>
-                </article>
-                <article class="card" aria-label="Microfone Dedicado - R$ 2.500,00">
-                    <h3>Microfone Dedicado</h3>
-                    <img src="img/microfone.png" alt="Microfone Dedicado para áudio profissional" width="200" height="150" loading="lazy">
-                    <p aria-label="Preço">R$ 399,90</p>
-                    <p>Qualidade no áudio.</p>
-                    <button class="botao" type="button" aria-label="Comprar Microfone Dedicado">Comprar</button>
-                </article>
-                <article class="card" aria-label="Monitor Curvo - R$ 2.500,00">
-                    <h3>Monitor Curvo</h3>
-                    <img src="img/monitor.jpg" alt="Monitor Curvo para maior produtividade" width="200" height="150" loading="lazy">
-                    <p aria-label="Preço">R$ 2.199,99</p>
-                    <p>Tamanho e produtividade.</p>
-                    <button class="botao" type="button" aria-label="Comprar Monitor Curvo">Comprar</button>
-                </article>
-                <article class="card" aria-label="Fone Intrauricular - R$ 2.500,00">
-                    <h3>Fone Intrauricular</h3>
-                    <img src="img/fone.png" alt="Fone Intrauricular com som cristalino" width="200" height="150" loading="lazy">
-                    <p aria-label="Preço">R$ 199,90</p>
-                    <p>Saúde para os ouvidos.</p>
-                    <button class="botao" type="button" aria-label="Comprar Fone Intrauricular">Comprar</button>
-                </article>
-            </div>
+              <h2 id="produtos-titulo">Produtos em Destaque</h2>
+              <div class="cards" id="lista-produtos"></div>
         </section>
         <section id="ofertas" aria-labelledby="ofertas-titulo">
-            <h2 id="ofertas-titulo">Ofertas Especiais</h2>
-            <div class="cards" role="region" aria-label="Lista de produtos em oferta">
-                <article class="card card-oferta" aria-label="Teclado Mecânico em oferta - De R$ 299,90 por R$ 229,90">
-                    <h3>Teclado Mecânico</h3>
-                    <img src="img/teclado.png" alt="Teclado Mecânico em promoção" width="200" height="150" loading="lazy">
-                    <p>
-                        <span aria-label="Preço original">
-                            <del>R$ 299,90</del>
-                        </span>
-                    </p>
-                    <p aria-label="Preço promocional" class="preco-desconto">R$ 229,90</p>
-                    <button class="botao" type="button" aria-label="Comprar Teclado Mecânico por R$ 229,90">Comprar</button>
-                </article>
-                <article class="card card-oferta" aria-label="Monitor Curvo em oferta - De R$ 2.199,99 por R$ 2.000,00">
-                    <h3>Monitor Curvo</h3>
-                    <img src="img/monitor.jpg" alt="Monitor Curvo em promoção" width="200" height="150" loading="lazy">
-                    <p>
-                        <span aria-label="Preço original">
-                            <del>R$ 2.199,99</del>
-                        </span>
-                    </p>
-                    <p aria-label="Preço promocional" class="preco-desconto">R$ 2.000,00</p>
-                    <button class="botao" type="button" aria-label="Comprar Monitor Curvo por R$ 2.000,00">Comprar</button>
-                </article>
-            </div>
-        </section>
+  <h2 id="ofertas-titulo">Ofertas Especiais</h2>
+  <div class="cards" id="lista-ofertas"></div>
+</section>
     </main>
     <footer id="contato" role="contentinfo" aria-labelledby="contato-titulo">
         <h2 id="contato-titulo" class="sr-only">Contato e Informações</h2>

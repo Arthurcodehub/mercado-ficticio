@@ -82,13 +82,15 @@ function mostrarToast(mensagem) {
   }, 3000);
 }
 
-document.querySelectorAll('.card .botao').forEach((botao) => {
-  botao.addEventListener('click', () => {
-    const card = botao.closest('.card');
-    const nomeProduto = card?.querySelector('h3')?.textContent ?? 'Produto';
-    mostrarToast(`✅ ${nomeProduto} adicionado — em breve você poderá finalizar a compra!`);
-  });
-});
+document.getElementById('lista-produtos')?.addEventListener('click', tratarCliqueComprar);
+document.getElementById('lista-ofertas')?.addEventListener('click', tratarCliqueComprar);
+
+function tratarCliqueComprar(evento) {
+  const botao = evento.target.closest('.botao');
+  if (!botao) return;
+  const nomeProduto = botao.closest('.card')?.querySelector('h3')?.textContent ?? 'Produto';
+  mostrarToast(`✅ ${nomeProduto} adicionado — em breve você poderá finalizar a compra!`);
+}
 
 document.getElementById('btn-whatsapp')?.addEventListener('click', () => {
   mostrarToast('📱 Este é um projeto fictício — sem WhatsApp real configurado.');
